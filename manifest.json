@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Video Downloader",
+  "version": "1.0",
+  "description": "A Chrome extension to download YouTube videos.",
+  "permissions": ["activeTab", "scripting", "https://www.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png"
+  }
+}
